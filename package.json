@@ -1,5 +1,5 @@
 {
-  "name": "npm_scripts_boilerplate",
+  "name": "ourkadai",
   "version": "1.0.0",
   "description": "",
   "author": "Greg Rickaby <greg@gregrickaby.com>",
@@ -28,7 +28,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "autoprefixer": "^9.6.1",
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.7",
     "cssnano": "^4.1.10",
     "eslint": "^6.1.0",
     "copy-files-from-to": "^2.1.0",
@@ -46,7 +45,8 @@
     "sass": "^1.23.0",
     "stylelint": "^10.1.0",
     "stylelint-config-recommended": "^2.2.0",
-    "uglify-es": "^3.3.9"
+    "uglify-es": "^3.3.9",
+    "firebase-tools": "^7.13.1"
   },
   "scripts": {
     "clean": "rimraf dist",
@@ -56,7 +56,7 @@
     "lint": "eslint src/js || true",
     "lint-scss": "stylelint src/scss/*.scss --syntax scss  || eslint src/js",
     "rollup": "rollup -c",
-    "serve": "browser-sync start --config browser-sync.js",
+    "serve": "firebase serve",
     "build:css": "run-s lint-scss scss",
     "build:js": "run-s lint rollup",
     "build:html": "posthtml -c .posthtmlrc",

@@ -1,64 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--
+Copyright (c) 2019 Google Inc.
 
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<html>
 <head>
-    <title>Ourkadai</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" f>
-    <meta name="description" content="BUILDING PRO-GRAMMERS !">
-    <meta name="author" content="SathishKumar.Thiyagarajan">
-    <meta property="og:image" content="http://techatpark.com/images/ok-logo-02.svg">
-    <meta property="og:description" content="We help deserving candidates to find their first software job by providing free training. Our goal is to make sure the right opportunity meets the right talent!">
-    <meta property="og:type" content="website" />
-    <meta name="msapplication-TileColor" content="#ff0000">
-    <meta name="msapplication-TileImage" content="images/ok-logo-02.svg">
-    <link rel="manifest" href="/manifest.json">
+  <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Authentication Example</title>
 
+  <!-- Material Design Theming -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.orange-indigo.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script defer src="https://code.getmdl.io/1.1.3/material.min.js"></script>
 
-
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
-
-    <!-- Plugin CSS -->
-    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
-
-    <!-- Theme CSS - Includes Bootstrap -->
-    <link href="css/creative.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="main.css">
 </head>
+<body>
+<div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-<body id="page-top">
-    <div class="container mt-5">
-    <div class="panel panel-default">
-        <div class="panel-body text-center">
-            Welcome to ourkadai
-        </div>
-        <div class="d-flex m-4 justify-content-center">
-            <img src="./images/ok-logo-02.svg" class="img-responsive" alt="Responsive image">
-        </div>
+  <!-- Header section containing title -->
+  <header class="mdl-layout__header mdl-color-text--white mdl-color--light-blue-700">
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+      <div class="mdl-layout__header-row mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--8-col-desktop">
+        <h3>Firebase Authentication</h3>
       </div>
     </div>
-    <!-- Footer -->
-    <!-- <footer class="bg-light py-5">
-    <div class="container"></div>
-      <div class="small text-center text-muted">Copyright &copy; 2019 - www.techatpark.com</div>
+  </header>
+
+  <main class="mdl-layout__content mdl-color--grey-100">
+    <div class="mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-grid">
+
+      <!-- Container for the Table of content -->
+      <div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col mdl-cell--12-col-tablet mdl-cell--12-col-desktop">
+        <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
+          <h2 class="mdl-card__title-text">Table of Contents</h2>
+        </div>
+        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
+          <p>
+            There are multiple methods available for authentication with Firebase. <em>Ensure that the appropriate sign-in method has been
+            enabled in the Firebase Console authentication panel</em>. Note: custom auth does not require enabling.
+          </p>
+
+          <ul>
+            <li><a href="anon.html">Anonymous</a><br><br></li>
+            <li><a href="email-password.html">Email and Password authentication</a></li>
+            <li><a href="email-link.html">Email Link authentication</a><br><br></li>
+            
+            <li><a href="customauth.html">Custom Authentication</a> and an Example <a href="exampletokengenerator/auth.html">Custom Token Generator</a><br><br></li>
+
+            <li><a href="phone-visible.html">Phone number sign-in with visible ReCaptcha</a></li>
+            <li><a href="phone-invisible.html">Phone number sign-in with invisible ReCaptcha</a></li>
+            <li><a href="phone-simple.html">Phone number sign-in with simplified popup flow (not recommended for production apps)</a><br><br></li>
+
+            <li><a href="google-popup.html">Google sign-in using Popup</a></li>
+            <li><a href="google-redirect.html">Google sign-in using Redirect</a></li>
+            <li><a href="google-credentials.html">Google sign-in using OAuth Credentials (via Google Sign-in Button)</a><br><br></li>
+
+            <li><a href="facebook-popup.html">Facebook login using Popup</a></li>
+            <li><a href="facebook-redirect.html">Facebook login using Redirect</a></li>
+            <li><a href="facebook-credentials.html">Facebook login using OAuth Credentials (via Facebook Login Button)</a><br><br></li>
+
+            <li><a href="twitter-popup.html">Twitter sign-in using Popup</a></li>
+            <li><a href="twitter-redirect.html">Twitter sign-in using Redirect</a><br><br></li>
+
+            <li><a href="microsoft-popup.html">Microsoft sign-in using Popup</a></li>
+            <li><a href="microsoft-redirect.html">Microsoft sign-in using Redirect</a><br><br></li>
+
+            <li><a href="github-popup.html">GitHub sign-in using Popup</a></li>
+            <li><a href="github-redirect.html">GitHub sign-in using Redirect</a><br><br></li>
+
+            <li><a href="apple-popup.html">Apple sign-in using Popup</a></li>
+            <li><a href="apple-redirect.html">Apple sign-in using Redirect</a></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-  </footer> -->
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/bundle.min.js"></script>
-
+  </main>
+</div>
 </body>
-
 </html>
-<link rel="shortcut icon" href="images/favico.ico" type="image/x-icon">
